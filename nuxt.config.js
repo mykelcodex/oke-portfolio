@@ -1,9 +1,6 @@
 
 const env = require('dotenv').config()
 
-const client = require('./plugins/contentful')
-
-
 export default {
   mode: 'universal',
   /*
@@ -93,6 +90,11 @@ export default {
 
   generate: {
     routes() {
+      const client = contentful.createClient({
+          space:  process.env.CTF_SPACE_ID,
+          accessToken: process.env.CTF_CD_ACCESS_TOKEN
+      });
+
       return client.getEntries({ content_type : 'post' })
       .then(entries =>{
         return entries.items.map(entry=>{
