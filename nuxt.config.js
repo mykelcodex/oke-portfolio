@@ -33,6 +33,7 @@ export default {
   css: [
     { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'js' },
     '~assets/css/tailwind.css', 
+    '~/assets/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
