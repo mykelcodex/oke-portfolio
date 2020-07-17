@@ -1,6 +1,7 @@
 
 const env = require('dotenv').config()
 
+
 export default {
   mode: 'universal',
   /*
@@ -92,7 +93,7 @@ export default {
     routes() {
       const client = contentful.createClient({
           space:  process.env.CTF_SPACE_ID,
-          accessToken: process.env.CTF_CD_ACCESS_TOKEN
+          accessToken: process.env.CTF_ACCESS_TOKEN
       });
 
       return client.getEntries({ content_type : 'post' })
