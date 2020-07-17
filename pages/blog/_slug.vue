@@ -29,7 +29,7 @@
    import client from '~/plugins/contentful';
   export default {
     asyncData({ params, error, payload }){
-      if(payload) return { post: payload }
+      // if(payload) return { post: payload }
       return client.getEntries({
         content_type: 'post',
         'fields.slug': params.slug

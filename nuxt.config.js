@@ -1,6 +1,9 @@
 
 const env = require('dotenv').config()
 
+const client = require('./plugins/contentful')
+
+
 export default {
   mode: 'universal',
   /*
@@ -17,6 +20,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/png', href: '/images/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', href: '/images/favicon-16x16.png' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/hopscotch.min.css' },
     ]
   },
   /*
@@ -28,8 +32,7 @@ export default {
   */
   css: [
     { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'js' },
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'php' }
+    '~assets/css/tailwind.css', 
   ],
   /*
   ** Plugins to load before mounting the App
@@ -89,7 +92,6 @@ export default {
   },
 
   generate: {
-    fallback: true,
     routes() {
       return client.getEntries({ content_type : 'post' })
       .then(entries =>{
@@ -109,6 +111,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+   extractcss:true,
     extend (config, ctx) {
     }
   }
