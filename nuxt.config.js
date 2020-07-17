@@ -1,9 +1,6 @@
 
 const env = require('dotenv').config()
 
-const client = require('./plugins/contentful')
-
-
 export default {
   mode: 'universal',
   /*
