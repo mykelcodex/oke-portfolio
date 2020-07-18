@@ -21,6 +21,7 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/images/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', href: '/images/favicon-16x16.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/hopscotch.min.css' },
+      { rel: 'stylesheet', href: './assets/css/tailwind.css' },
     ]
   },
   /*
@@ -32,8 +33,9 @@ export default {
   */
   css: [
     { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'js' },
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'php' },
     '~assets/css/tailwind.css', 
-    '~/assets/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
