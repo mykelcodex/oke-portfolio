@@ -21,7 +21,6 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/images/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', href: '/images/favicon-16x16.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/hopscotch.min.css' },
-      { rel: 'stylesheet', href: './assets/css/tailwind.css' },
     ]
   },
   /*
