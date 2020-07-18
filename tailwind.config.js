@@ -10,11 +10,9 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'components/**/*.vue',
-      'assets/**/*.css',
       'layouts/**/*.vue',
       'pages/**/*.vue',
       'plugins/**/*.js',
-      'nuxt.config.js'
     ]
   },
   theme: {
